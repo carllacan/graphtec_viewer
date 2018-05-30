@@ -1,0 +1,6 @@
+graphtec_cleaner/
+tkinterwrapper/
+tkwrapper/
+tkwrapper
+__pycache__/
+*.pyc
