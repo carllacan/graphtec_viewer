@@ -76,7 +76,7 @@ class ChannelsFrame(tkwrapper.Frame):
                   "purple"]
         for i in range(0, 10):
             print(i)
-            self.channelframes.append(ChannelFrame(parent, i, 0, 
+            self.channelframes.append(ChannelFrame(self, i, 0, 
                                                    i, colors[i]))
 
 class LeftAxisFrame(tkwrapper.Frame):
@@ -127,7 +127,7 @@ class ChannelFrame(tkwrapper.Frame):
                                  label= str(number), 
                                  default="Channel {}".format(number))
         self.active = option.CheckBox(self, number, 2,
-                                      label = "b",
+                                      label = "",
                                       default = False)
         
         
@@ -151,7 +151,7 @@ class MainFrame (tkwrapper.Frame):
         self.cursor2frame= Cursor1Frame(self, 1, 4)
         self.cursordiffframe= Cursor1Frame(self, 1, 5)
         
-        self.channelsframe = ChannelsFrame(self, 0, 6)
+        self.channelsframe = ChannelsFrame(self, (0, 1), 7)
         
     
 root = tkwrapper.Root()
